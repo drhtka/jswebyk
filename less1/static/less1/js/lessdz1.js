@@ -1,5 +1,5 @@
-var courses = new Array('HTML', 'CSS', 'JS');
-document.getElementById('array').innerHTML = courses
+var less = new Array('HTML', 'CSS', 'JS');
+document.getElementById('array').innerHTML = less
 //document.write(courses)
 
 //Этот синтаксис объявляет массив courses, который
