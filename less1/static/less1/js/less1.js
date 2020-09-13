@@ -7,6 +7,6 @@ var myobject = {
     console.log(myobject)
     myobject.color = 'blue' // добавляем новый объект
     console.log(myobject)
-    myobject.option = {spiker: 'lighting', case: 'original'} // добавляем новыйвложенный объект
+    myobject.option = {spiker: 'lighting', case: 'original'} // добавляем новый вложенный объект
     console.log(myobject)
     console.log(myobject.option.spiker)
