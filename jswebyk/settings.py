@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'less1.apps.Less1Config',
     'less2.apps.Less2Config',
+    'less3.apps.Less3Config',
 ]
 
 MIDDLEWARE = [
@@ -130,6 +131,7 @@ STATICFILES_DIRS = [
 
     os.path.join(BASE_DIR, "less1/static"),
     os.path.join(BASE_DIR, "less2/static"),
+    os.path.join(BASE_DIR, "less3/static"),
     # os.path.join(BASE_DIR, 'collectstatic'),
     # потом проверить что офайлы работают и с static
 
