@@ -132,6 +132,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "less1/static"),
     os.path.join(BASE_DIR, "less2/static"),
     os.path.join(BASE_DIR, "less3/static"),
+    os.path.join(BASE_DIR, "less4/static"),
+    os.path.join(BASE_DIR, "less5/static"),
     # os.path.join(BASE_DIR, 'collectstatic'),
     # потом проверить что офайлы работают и с static
 

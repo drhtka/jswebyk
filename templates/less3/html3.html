@@ -4,16 +4,29 @@
 {% block title %}<title>JS-3-WEBYK</title>{% endblock title %}
 {% block content %}
 
-
     <div class="im">lees JS-3-WEBYK </div>
 
     <button onclick="openModal()">Вызвать модалку</button>
+
+    <div>phone 7 500$
+        <button onclick="openModal('iphone 7', 500)">купить</button>
+    </div>
+    <div>phone 8 600$
+        <button onclick="openModal('iphone 8', 600)">купить</button>
+    </div>
+    <div>phone 9 700$
+        <button onclick="openModal('iphone 9', 700)">купить</button>
+    </div>
     <div class="myModal">
-        <div class="modalContent">
-            Привет! Это модальное окно!!!
+        <div id="close" onclick="closeModal()">x</div>
+        <div class="myCart" >
+
+        </div>
+        <div class="modalContent" >
+            Вы купили товар
         </div>
     </div>
-11
+
 {% endblock %}
 
 

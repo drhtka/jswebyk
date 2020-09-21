@@ -23,4 +23,6 @@ urlpatterns = [
     path('less1/', include('less1.urls')),
     path('less2/', include('less2.urls')),
     path('less3/', include('less3.urls')),
+    path('less4/', include('less4.urls')),
+    path('less5/', include('less5.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

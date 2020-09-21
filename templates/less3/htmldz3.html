@@ -6,14 +6,33 @@
 
 
     <div class="im">lees JS-3-DZ-WEBYK </div>
-
-    <button onclick="openModal()">Вызвать модалку</button>
+<div>Сделать по клику передачу назв товара и цену</div>
+    <div>В функции поймать все это</div>
+    <div>И вывести в модалку</div>
+    <div>Важно чтобы при добавлении каждого товара в модалке они ввводились друг под другом</div>
+    <button onclick="modalShow()">Вызвать модалку</button>
+    <div>phone 7 500$
+        <button onclick="openModal('iphone 7', 500)">купить</button>
+    </div>
+    <div>phone 8 600$
+        <button onclick="openModal('iphone 8', 600)">купить</button>
+    </div>
+    <div>phone 9 700$
+        <button onclick="openModal('iphone 9', 700)">купить</button>
+    </div>
     <div class="myModal">
     <div id="close" onclick="closeModal()">x</div>
+        <div class="myCart" >
+
+        </div>
         <div class="modalContent">
-            Привет! Это модальное окно!!!
+            Вы купили эти товары
         </div>
 
     </div>
 
 {% endblock %}
+{% block less4 %}
+{% endblock less4 %}
+{% block less5 %}
+{% endblock less5 %}
