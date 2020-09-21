@@ -1,0 +1,27 @@
+/*modal*/
+.myModal{
+    background: gray;
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+    display: none;
+}
+/*Class open close modal*/
+.visible{
+    display: block;
+}
+
+/* Modal Content */
+.modalContent{
+    margin: auto;
+    padding: 100px;
+    width: 80%;
+
+}
+/*close modal*/
+#close{
+    color: white;
+    float: right;
+    cursor: pointer;
+    margin-right: 5px;
+}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>JS-5-DZ-WEBYK</title>{% endblock title %}
+{% block content %}
+
+    <div class="im">lees JS-5-DZ-WEBYK </div>
+
+    <button onclick="modalShow()">Вызвать модалку</button>
+    <div>phone 7 500$
+        <button onclick="openModal('iphone 7', 500, this)">купить</button>
+    </div>
+    <div>phone 8 600$
+        <button onclick="openModal('iphone 8', 600, this)">купить</button>
+    </div>
+    <div>phone 9 700$
+        <button onclick="openModal('iphone 9', 700, this)">купить</button>
+    </div>
+    <div class="myModal">
+    <div id="close" onclick="closeModal()">x</div>
+        <div class="myCart" >
+
+        </div>
+        <div class="modalContent">
+            Вы купили эти товары
+        </div>
+
+    </div>
+
+{% endblock %}
