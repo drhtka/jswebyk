@@ -8,28 +8,33 @@
     <div></div>
 
     <button onclick="modalShow()">Вызвать модалку</button>
-    <div>phone 7 500$
-        <button onclick="openModal('iphone 7', 500, this)">купить</button>
+    <div>phone1 7500
+        <button onclick="openModal('iphone 7x', 7500, this)">купить</button>
     </div>
-    <div>phone 8 600$
-        <button onclick="openModal('iphone 8', 600, this)">купить</button>
+    <div>phone2 8600
+        <button onclick="openModal('iphone 8x', 8600, this)">купить</button>
     </div>
-    <div>phone 9 700$
-        <button onclick="openModal('iphone 9', 700, this)">купить</button>
+    <div>phone3 9700
+        <button onclick="openModal('iphone 9x', 9700, this)">купить</button>
+    </div>
+    <div>phone4 9700
+        <button onclick="openModal('iphone 9x', 9700, this)">купить</button>
+    </div>
+    <div>phone5 9700
+        <button onclick="openModal('iphone 9x', 9700, this)">купить</button>
     </div>
     <div class="myModal">
         <div id="close" onclick="closeModal()">x</div>
-        <div class="myCart" >
+        <div class="myCart">
 
         </div>
         <div class="modalContent">
             Вы купили эти товары
         </div>
+        <div id="summ">
 
+        </div>
     </div>
 
 {% endblock %}
-{% block less1 %}{% endblock less1 %}
-{% block less2 %}{% endblock less2 %}
-{% block less3 %}{% endblock less3 %}
-{% block less4 %}{% endblock less4 %}
+{% block js %}<script type="text/javascript" src="{% static "less5/js/less5.js" %}"></script>{% endblock js %}

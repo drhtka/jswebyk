@@ -13,9 +13,10 @@
 
 /* Modal Content */
 .modalContent{
-    margin: auto;
-    padding: 100px;
+    margin: 0 auto;
+    padding: 40px;
     width: 80%;
+    text-align: center;
 
 }
 /*close modal*/
@@ -24,4 +25,13 @@
     float: right;
     cursor: pointer;
     margin-right: 5px;
+}
+
+#summ{
+    padding-left: 50px;
+}
+
+.myCart{
+    overflow-y: scroll;
+    height: 50px;
 }

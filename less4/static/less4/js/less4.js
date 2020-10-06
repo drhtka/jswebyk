@@ -7,7 +7,6 @@ function openModal(x, y, myThis) {
     mycart.innerHTML = mycart.innerHTML + myGoodsDiv
     myThis.disabled = true // из js принудительн блочим
 
-
 }
 function closeModal() {
     document.getElementsByClassName('myModal')[0].classList.remove('visible')
