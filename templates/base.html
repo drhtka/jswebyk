@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
 
@@ -8,13 +8,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% block title %}<title>JS-WEBYK</title>{% endblock title %}
-    <link type="text/css" rel="stylesheet" href="{% static "less1/css/less1.css" %}">
+{% block css %}{% endblock css %}
+    {% comment %}<link type="text/css" rel="stylesheet" href="{% static "less1/css/less1.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "less2/css/less2.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "less3/css/less3.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "less4/css/less4.css" %}">
-    <link type="text/css" rel="stylesheet" href="{% static "less5/css/less5.css" %}">
+    <link type="text/css" rel="stylesheet" href="{% static "less5/css/less5.css" %}">{% endcomment %}
 
 </head>
+<div ><a href="{% url 'index' %}">Главная</a></div>
 <body>
 {% block content %}{% endblock %}
 {% block js %}{% endblock js %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>Главная</title>{% endblock title %}
+{% block content %}
+    <div class="content">
+    <div>
+        <a href="{% url 'less5' %}">Урок 5</a>
+    </div>
+    <div>
+        <a href="{% url 'lessdz5' %}">Дз 5</a>
+    </div>
+    </div>
+{% endblock %}
+{#{% block js %}<script type="text/javascript" src="{% static "index/js/index.js" %}"></script>{% endblock js %}#}

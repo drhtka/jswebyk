@@ -6,10 +6,10 @@ from django.urls import path
 from less4.views import JstDef4, JsDefDz4
 
 
-urlpatterns = {
+urlpatterns = [
     path('', JstDef4),
     path('dz/', JsDefDz4),
-}
+]
 
 
 

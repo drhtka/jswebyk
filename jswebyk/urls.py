@@ -17,9 +17,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from index.views import IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', IndexView.as_view(), name='index'),
     path('less1/', include('less1.urls')),
     path('less2/', include('less2.urls')),
     path('less3/', include('less3.urls')),
