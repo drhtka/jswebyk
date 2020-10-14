@@ -1,7 +1,7 @@
 console.log('1')
 mycart= document.getElementsByClassName('myCart')[0];
 console.log('2')
-console.log()
+//console.log()
 function openModal(x, y, myThis) {
 //Функция вывода товаров в модалку
     console.log('3')

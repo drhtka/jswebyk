@@ -56,9 +56,10 @@ function minus(thisminus) {
 
 function del(delcart, num_product) {
     //Функция у
-    alert(num_product)
+    //alert(num_product)
     let num_buttom = document.getElementsByClassName('bay')[0].button
-    alert(num_buttom)
+    //alert(num_buttom)
+    document.getElementsByClassName('bay')[num_product].disabled = false
     delcart.parentNode.remove();
     let count_tovar_cart = delcart.previousElementSibling.previousElementSibling.innerHTML // обращаемся к цифре "1" <span title='"+y+"'>1</span>" при нажатии удалить
     let sum_minus = ''
