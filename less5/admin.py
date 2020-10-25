@@ -5,7 +5,7 @@ from less5.models import ProductModel
 
 
 class ProductModelAdmin(admin.ModelAdmin):
-    list_display = ['productsname', 'id',]
+    list_display = ['productsname', 'id', 'num_product']
 
 
 admin.site.register(ProductModel, ProductModelAdmin, )

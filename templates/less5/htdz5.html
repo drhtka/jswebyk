@@ -2,48 +2,62 @@
 {% load static %}
 
 {% block title %}<title>JS-5-DZ-WEBYK</title>{% endblock title %}
-{% block css %}<link type="text/css" rel="stylesheet" href="{% static "less5/css/less5.css" %}">{% endblock css %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static "less5/css/less-dz5.css" %}">{% endblock css %}
 {% block content %}
+    <div class="less-dz">Lees JS-5-WEBYK-<span class="color-dz">DZ</span> с базой данных </div>
+    <div class="product-in-cart">
+        <div class="text-prod">Товары в корзине</div>
+        <button onclick="modalShow()">Посмотреть</button>
+    </div>
+    <div class="main-table">
+    <table>
+        <tr class="tr-index">
+            <td class="td_index">Номер</td>
+            <td>название</td>
+            <td>цена</td>
+        </tr>
+        {% for all_products_s in all_products %}
+            <tr>
 
-    <button onclick="modalShow()">Вызвать модалку</button>
-    {% for all_products_s in all_products %}
-
-        <div>
-            Название:{{ all_products_s.1 }} Цена:{{ all_products_s.2 }}
-        </div>
-            <div>
-        <button onclick="openModal({{ all_products_s.productsname }}, {{ all_products_s.price }}, this)">купить</button>
-            </div>
-    {% endfor %}
-
-{% comment %}<button onclick="modalShow()">Вызвать модалку</button>
-    <div>phone1 7500
-        <button onclick="openModal('iphone 7x', 7500, this)">купить</button>
+                <td class="td_index">{{ all_products_s.1 }}</td><!--id-->
+                <td>{{ all_products_s.2 }}</td><!--Название-->
+                <td>{{ all_products_s.3 }}</td><!--Цена-->
+            <td>
+                <div>
+                <button class='bay' onclick="openModal('{{ all_products_s.2 }}', {{ all_products_s.3 }}, this, {{ all_products_s.0 }})">купить</button>
+                </div>
+            </td>
+            </tr>
+        {% endfor %}
+        </table>
     </div>
-    <div>phone2 8600
-        <button onclick="openModal('iphone 8x', 8600, this)">купить</button>
-    </div>
-    <div>phone3 9700
-        <button onclick="openModal('iphone 9x', 9700, this)">купить</button>
-    </div>
-    <div>phone4 9700
-        <button onclick="openModal('iphone 9x', 9700, this)">купить</button>
-    </div>
-    <div>phone5 9700
-        <button onclick="openModal('iphone 9x', 9700, this)">купить</button>
-    </div>{% endcomment %}
     <div class="myModal">
+        <div class="modalContent">
+            Вы выбрали эти товары
+        </div>
         <div id="close" onclick="closeModal()">x</div>
         <div class="myCart">
 
         </div>
-        <div class="modalContent">
-            Вы купили эти товары
-        </div>
+        <div class="cart_flex">
+            <div>
+                Сумма товаров:
+            </div>
         <div id="summ">
-
         </div>
+            <div>
+                руб.
+            </div>
     </div>
 
+<form class="form_order" onsubmit="chekForm(this, event)">
+<div class="myCart-input">
+    <input type="text" value="" name="chek" placeholder="Фамилия, имя, отчество *">
+    <input type="text" value="" name="chek2" placeholder="Телефон (например: +7 xxx xxx xx xx) *">
+    <input type="text" value="" name="chek3" placeholder="Электронная почта *">
+</div>
+    <input class="submit_a_request" type="submit" value="Оформить заявку">
+</form>
+    </div>
 {% endblock %}
 {% block js %}<script type="text/javascript" src="{% static "less5/js/lessdz5.js" %}"></script>{% endblock js %}

@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% block title %}<title>JS-WEBYK</title>{% endblock title %}
 {% block css %}{% endblock css %}
+    <link type="text/css" rel="stylesheet" href="{% static "index/css/index.css" %}">
     {% comment %}<link type="text/css" rel="stylesheet" href="{% static "less1/css/less1.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "less2/css/less2.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "less3/css/less3.css" %}">
@@ -16,7 +17,7 @@
     <link type="text/css" rel="stylesheet" href="{% static "less5/css/less5.css" %}">{% endcomment %}
 
 </head>
-<div ><a href="{% url 'index' %}">Главная</a></div>
+<div class="main-div"><a href="{% url 'index' %}">Главная</a></div>
 <body>
 {% block content %}{% endblock %}
 {% block js %}{% endblock js %}

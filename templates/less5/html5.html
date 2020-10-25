@@ -5,25 +5,34 @@
 {% block css %}<link type="text/css" rel="stylesheet" href="{% static "less5/css/less5.css" %}">{% endblock css %}
 {% block content %}
 
-    <div class="im">lees JS-5-WEBYK </div>
-    <div></div>
-
-    <button onclick="modalShow()">Вызвать модалку</button>
-
-    <div>phone1 7500
-        <button class="bay" onclick="openModal('iphone 7x', 7500, this, 0)">купить</button>
+    <div class="less-dz">Lees JS-5-WEBYK </div>
+    <div class="product-in-cart">
+        <div class="text-prod">Товары в корзине</div>
+        <button onclick="modalShow()">Посмотреть</button>
     </div>
-    <div>phone2 8600
-        <button class="bay" onclick="openModal('iphone 8x', 8600, this, 1)">купить</button>
-    </div>
-    <div>phone3 9700
-        <button class="bay" onclick="openModal('iphone 9x', 9700, this, 2)">купить</button>
-    </div>
-    <div>phone4 9700
-        <button class="bay" onclick="openModal('iphone 9x', 9700, this, 3)">купить</button>
-    </div>
-    <div>phone5 9700
-        <button class="bay" onclick="openModal('iphone 9x', 9700, this, 4)">купить</button>
+    <div class="main-table">
+        <table>
+            <tr class="tr-index">
+                <td class="td_index">название цена</td>
+            </tr>
+            <tr>
+                <td class="td_index"><div>phone1 7500
+                    <button class="bay" onclick="openModal('iphone 7x', 7500, this, 0)">купить</button>
+                </div>
+                <div>phone2 8600
+                    <button class="bay" onclick="openModal('iphone 8x', 8600, this, 1)">купить</button>
+                </div>
+                <div>phone3 9700
+                    <button class="bay" onclick="openModal('iphone 9x', 9700, this, 2)">купить</button>
+                </div>
+                <div>phone4 9700
+                    <button class="bay" onclick="openModal('iphone 9x', 9700, this, 3)">купить</button>
+                </div>
+                <div>phone5 9700
+                    <button class="bay" onclick="openModal('iphone 9x', 9700, this, 4)">купить</button>
+                </div></td>
+            </tr>
+        </table>
     </div>
     <div class="myModal">
         <div class="modalContent">
@@ -33,17 +42,21 @@
         <div class="myCart">
 
         </div>
-
-        <div id="summ">
-
-        </div>
+            <div class="cart_flex">
+                <div>
+                    Сумма товаров:
+                </div>
+                <div id="summ">
+                </div>
+            </div>
+        <form class="form_order" onsubmit="chekForm(this,event)">
         <div class="myCart-input">
-            <input type="text" value="" placeholder="Фамилия, имя, отчество *">
-
-            <input type="text" value="" placeholder="Телефон (например для РФ: +7 xxx xxx xx xx) *">
-
-            <input type="text" value="" placeholder="Электронная почта *">
+            <input type="text" value="" name="chek" placeholder="Фамилия, имя, отчество *">
+            <input type="text" value="" name="chek2" placeholder="Телефон (например для РФ: +7 xxx xxx xx xx) *">
+            <input type="text" value="" name="chek3" placeholder="Электронная почта *">
         </div>
+            <input class="submit_a_request" type="submit" value="Оформить заявку">
+        </form>
     </div>
 
 {% endblock %}

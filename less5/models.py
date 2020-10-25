@@ -18,8 +18,8 @@ class ProductModel(models.Model):
     productsname = models.CharField('Название', max_length=20, blank=True, null=True)
     #catid = models.IntegerField('id категории', null=True)
     price = models.CharField(max_length=30, verbose_name='Цена', blank=True)
-    #img = models.ImageField(upload_to='img', verbose_name='Основное изображение', blank=True, null=True)
-    #desc = models.TextField('Описание', blank=True, null=True)
+    num_product = models.PositiveIntegerField('Номер продукта', auto_created=True, null=True, unique=True)
+
 
     def publich(self):
         self.order_date = timezone.now()

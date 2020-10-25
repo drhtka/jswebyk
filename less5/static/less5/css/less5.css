@@ -1,17 +1,48 @@
+.less-dz{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #205067;
+}
+.color-dz{
+    color: red;
+}
+
+.product-in-cart{
+    width: 200px;
+    height: 200px;
+    background: lightgrey;
+    border-radius: 10px;
+    border: 1px solid red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+div .text-prod{
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
 /*modal*/
 .myModal{
     background: lightgrey;
-    width: 600px;
+    width: 500px;
     height: 500px;
-    margin: 0 auto;
+    margin-top: -200px;
+    margin-left: 350px;
+    /*margin: 0 auto;*/
     display: none;
     padding-bottom: 50px;
+    border-radius: 10px;
+    border: 1px solid red;
 }
 /*Class open close modal*/
 .visible{
     display: block;
+    margin-top: -435px;
 }
-
+.myModal .visible{
+    margin-top: -250px;
+}
 /* Modal Content */
 .modalContent{
     margin: 0 auto;
@@ -28,23 +59,69 @@
     margin-right: 8px;
     margin-top: -95px;
 }
-
-#summ{
-    padding-left: 50px;
+.cursor-close-goods{
+    color: #ff0000;
+    cursor: pointer;
 }
+/*#summ{*/
+/*    padding-left: 500px;*/
+/*    padding-top: 50px;*/
+/*}*/
 
 .myCart{
     overflow-y: scroll;
-    height: 80px;
+    height: 120px;
+    /*padding: 15px 0 15px;*/
+    width: 90%;
+    margin: 0 auto;
 }
-
+.myCart-input{
+    margin-top: 30px;
+    position: revert;
+}
 .myCart-input input{
     width: 50%;
     height: 39px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
     display: block;
     padding-left: 15px;
+}
+.submit_a_request{
+    background: #999891; /* цвет фона */
+    color: white; /* Белые буквы */
+    font-size: 13pt; /* Размер шрифта в пунктах */
+    height: 42px;
+    margin-left: 150px;
+    border: 0.5px solid red;
+    border-radius: 5px ;
+    margin-top: 30px;
+    width: 200px;
+}
 
+.cart_flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 38%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
 
+.goods_data{
+    text-align: center;
+    border-top: 1px dashed;
+    padding: 10px 0 10px;
+}
+
+.tr-index{
+    text-align: center;
+}
+
+.td_index{
+    text-align: center;
+}
+
+.main-table{
+    margin-top: 100px;
 }
