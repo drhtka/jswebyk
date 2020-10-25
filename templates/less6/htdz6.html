@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}<title>JS-6-DZ-WEBYK</title>{% endblock title %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static "less6/css/less-dz6.css" %}">{% endblock css %}
+{% block content %}
+    <div class="less-dz">Lees JS-<span class="color-int">6</span>-WEBYK-<span class="color-dz">DZ</span> с базой данных </div>
+    <div class="product-in-cart">
+        <div class="text-prod">Товары в корзине</div>
+        <button onclick="modalShow()">Посмотреть</button>
+    </div>
+    <div class="main-table">
+    <table>
+        <tr class="tr-index">
+            <td class="td_index">Номер</td>
+            <td>название</td>
+            <td>цена</td>
+        </tr>
+        {% for all_products_s in all_products %}
+            <tr>
+
+                <td class="td_index">{{ all_products_s.1 }}</td><!--id-->
+                <td>{{ all_products_s.2 }}</td><!--Название-->
+                <td>{{ all_products_s.3 }}</td><!--Цена-->
+            <td>
+                <div>
+                <button class='bay' onclick="openModal('{{ all_products_s.2 }}', {{ all_products_s.3 }}, this, {{ all_products_s.0 }})">купить</button>
+                </div>
+            </td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+    <div class="myModal">
+        <div class="modalContent">
+            Вы выбрали эти товары
+        </div>
+        <div id="close" onclick="closeModal()">x</div>
+        <div class="myCart">
+
+        </div>
+        <div class="cart_flex">
+            <div>
+                Сумма товаров:
+            </div>
+        <div id="summ">
+        </div>
+            <div>
+                руб.
+            </div>
+    </div>
+
+<form class="form_order" onsubmit="chekForm(this, event)">
+<div class="myCart-input">
+    <input type="text" value="" name="chek" placeholder="Фамилия, имя, отчество *">
+    <input type="text" value="" name="chek2" placeholder="Телефон (например: +7 xxx xxx xx xx) *">
+    <input type="text" value="" name="chek3" placeholder="Электронная почта *">
+</div>
+    <input class="submit_a_request" type="submit" value="Оформить заявку">
+</form>
+    </div>
+{% endblock %}
+{% block js %}<script type="text/javascript" src="{% static "less6/js/lessdz6.js" %}"></script>{% endblock js %}

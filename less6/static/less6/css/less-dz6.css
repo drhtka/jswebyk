@@ -8,6 +8,10 @@
     color: red;
 }
 
+.color-int{
+    color: #ff00c8;
+}
+
 .product-in-cart{
     width: 200px;
     height: 200px;
@@ -15,7 +19,8 @@
     border-radius: 10px;
     border: 1px solid red;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 div .text-prod{
@@ -38,7 +43,7 @@ div .text-prod{
 /*Class open close modal*/
 .visible{
     display: block;
-    margin-top: -435px;
+    margin-top: -450px;
     margin-left: 450px;
 }
 .myModal .visible{
@@ -125,4 +130,5 @@ div .text-prod{
 
 .main-table{
     margin-top: 100px;
+    margin-left: 80px;
 }

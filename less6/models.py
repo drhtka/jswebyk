@@ -12,13 +12,14 @@ class ProductModel(models.Model):
     class Meta:
         verbose_name = 'Тоовар'
         verbose_name_plural = 'Товары'
-        db_table = 'products'
+        db_table = 'products_six'
 
     id = models.AutoField(primary_key=True, auto_created=True, null=False)
     productsname = models.CharField('Название', max_length=20, blank=True, null=True)
+    #catid = models.IntegerField('id категории', null=True)
     price = models.CharField(max_length=30, verbose_name='Цена', blank=True)
     num_product = models.PositiveIntegerField('Номер продукта', auto_created=True, null=True, unique=True)
-    #deq = models.CharField(max_length=24, blank=True)
+
 
     def publich(self):
         self.order_date = timezone.now()
