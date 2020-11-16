@@ -5,6 +5,7 @@
 {% block css %}<link type="text/css" rel="stylesheet" href="{% static "less6/css/less-dz6.css" %}">{% endblock css %}
 {% block content %}
     <div class="less-dz">Lees JS-<span class="color-int">6</span>-WEBYK-<span class="color-dz">DZ</span> с базой данных </div>
+    <div style="font-weight: bolder; text-align: -webkit-left">делаем скидку для товара который попал в корзину вторым</div>
     <div class="product-in-cart">
         <div class="text-prod">Товары в корзине</div>
         <button onclick="modalShow()">Посмотреть</button>
@@ -16,9 +17,10 @@
             <td>название</td>
             <td>цена</td>
         </tr>
+
         {% for all_products_s in all_products %}
             <tr>
-
+{#{{ all_products }}#}
                 <td class="td_index">{{ all_products_s.1 }}</td><!--id-->
                 <td>{{ all_products_s.2 }}</td><!--Название-->
                 <td>{{ all_products_s.3 }}</td><!--Цена-->
@@ -45,8 +47,8 @@
             </div>
         <div id="summ">
         </div>
-            <div>
-                руб.
+            <div id="my_rub">
+{#                руб.#}
             </div>
     </div>
 

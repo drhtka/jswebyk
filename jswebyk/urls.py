@@ -28,5 +28,6 @@ urlpatterns = [
     path('less4/', include('less4.urls')),
     path('less5/', include('less5.urls')),
     path('less6/', include('less6.urls')),
+    path('video1/', include('video1.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -8,5 +8,5 @@ class IndexView(View):
 
     def get(self, request):
         all_products = ProductModel.objects.values_list()
-        print(all_products)
+        # print(all_products)
         return render(request, 'index/index.html')

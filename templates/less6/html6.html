@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}<title>JS-5-WEBYK</title>{% endblock title %}
+{% block title %}<title>JS-6-WEBYK</title>{% endblock title %}
 {% block css %}<link type="text/css" rel="stylesheet" href="{% static "less6/css/less6.css" %}">{% endblock css %}
 {% block content %}
 
     <div class="less-dz">Lees JS-6-WEBYK </div>
+    <div style="font-weight: bolder">делаем скидку для товара который попал в корзину вторым</div>
     <div class="product-in-cart">
         <div class="text-prod">Товары в корзине</div>
         <button onclick="modalShow()">Посмотреть</button>
@@ -16,20 +17,20 @@
                 <td class="td_index">название цена</td>
             </tr>
             <tr>
-                <td class="td_index"><div>phone1 7500
-                    <button class="bay" onclick="openModal('iphone 7x', 7500, this, 0)">купить</button>
+                <td class="td_index"><div>iphone 7x 7500
+                    <button class="bay" onclick="openModal('iphone-7x', 7500, this, 0)">купить</button>
                 </div>
-                <div>phone2 8600
+                <div>iphone 8x 8600
                     <button class="bay" onclick="openModal('iphone 8x', 8600, this, 1)">купить</button>
                 </div>
-                <div>phone3 9700
+                <div>iphone 9x 9700
                     <button class="bay" onclick="openModal('iphone 9x', 9700, this, 2)">купить</button>
                 </div>
-                <div>phone4 9700
-                    <button class="bay" onclick="openModal('iphone 9x', 9700, this, 3)">купить</button>
+                <div>iphone 10x 12200
+                    <button class="bay" onclick="openModal('iphone 10x', 12200, this, 3)">купить</button>
                 </div>
-                <div>phone5 9700
-                    <button class="bay" onclick="openModal('iphone 9x', 9700, this, 4)">купить</button>
+                <div>iphone 1x 14330
+                    <button class="bay" onclick="openModal('iphone 1x', 14330, this, 4)">купить</button>
                 </div></td>
             </tr>
         </table>
@@ -49,13 +50,14 @@
                 <div id="summ">
                 </div>
             </div>
-        <form class="form_order" onsubmit="chekForm(this,event)">
+        <form  class="form_order" onsubmit="chekForm(this,event)" action="/less6/lessin6" method="get">
         <div class="myCart-input">
             <input type="text" value="" name="chek" placeholder="Фамилия, имя, отчество *">
             <input type="text" value="" name="chek2" placeholder="Телефон (например для РФ: +7 xxx xxx xx xx) *">
             <input type="text" value="" name="chek3" placeholder="Электронная почта *">
         </div>
-            <input class="submit_a_request" type="submit" value="Оформить заявку">
+            <input type="hidden" id="datacard" name="datacard">
+            <input class="submit_a_request" type="button" value="Оформить заявку" onclick="myCartsend()">
         </form>
     </div>
 

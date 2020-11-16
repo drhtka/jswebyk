@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'less4.apps.Less4Config',
     'less5.apps.Less5Config',
     'less6.apps.Less6Config',
+    'video1.apps.Video1Config',
 ]
 
 MIDDLEWARE = [
@@ -139,6 +140,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "less4/static"),
     os.path.join(BASE_DIR, "less5/static"),
     os.path.join(BASE_DIR, "less6/static"),
+    os.path.join(BASE_DIR, "video1/static"),
     # os.path.join(BASE_DIR, 'collectstatic'),
     # потом проверить что офайлы работают и с static
 

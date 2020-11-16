@@ -2,21 +2,111 @@
 {% load static %}
 
 {% block title %}<title>Главная</title>{% endblock title %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static "index/css/index.css" %}">{% endblock css %}
 {% block content %}
-    <div class="content">
+    <div class="container">
+        <div class="index-grid" >
+            <div class="submit_a_request">
+                        <div class="link-block-text"><a href="{% url 'video1' %}">Курс 1</a></div>
+                       <div class="link-block-text-dz"><a href="{% url 'videodz1' %}">Курс 1 Дз</a></div>
+                <div class="block-text">по видеоурокам +</div>
+            </div>
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 2 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 2 Дз</a></div>
 
-    <div>
-        <a href="{% url 'less5' %}">Урок 5</a>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 3 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 3 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 4 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 4 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 5 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 5 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="{% url 'video1' %}">Курс 6</a></div>
+                <div class="link-block-text-dz"><a href="{% url 'videodz1' %}">Курс 6 Дз</a></div>
+                <div class="block-text">по видеоурокам +</div>
+            </div>
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 7 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 7 Дз</a></div>
+
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 8 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 8 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 9 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 9 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 10 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 10 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 11 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 11 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 12 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 12 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
+            <div class="submit_a_request">
+                <div class="link-block-text"><a href="">Курс 13 </a></div>
+                <div class="link-block-text-dz"><a href="">Курс 13 Дз</a></div>
+                <div class="block-text">по видеоурокам</div>
+            </div>
+
     </div>
-    <div>
-        <a href="{% url 'lessdz5' %}">Дз 5</a>
     </div>
-        <div>
+    <div class="contener">
+    <div class="index-grid-less" >
+    <div class="submit_a_request-less">
+        <div class="link-block-text">
+            <a href="{% url 'less5' %}">Урок 5</a>
+        </div>
+        <div class="link-block-text-dz">
+            <a href="{% url 'lessdz5' %}">Дз 5</a>
+        </div>
+    </div>
+    <div class="submit_a_request-less">
+        <div class="link-block-text">
             <a href="{% url 'less6' %}">Урок 6</a>
         </div>
-        <div>
+        <div class="link-block-text-dz">
             <a href="{% url 'lessdz6' %}">Дз 6</a>
         </div>
     </div>
+    </div>
+    </div>
+
+
 {% endblock %}
 {% block js %}<script type="text/javascript" src="{% static "index/js/index.js" %}"></script>{% endblock js %}

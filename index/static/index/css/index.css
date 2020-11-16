@@ -1,10 +1,95 @@
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0px;
+    height: 500px;
+}
+
+/*.grid-item{*/
+/*    text-align: center;*/
+/*    font-size: 1.1em;*/
+/*    padding: 1.5em;*/
+/*    color: white;*/
+/*}*/
 .main-div{
-    text-align: center;
+    /*text-align: center;*/
     font-size: 20px;
     font-weight: bolder;
-
+    margin-left: 750px;
 }
 
 .main-div a{
     color: #0000FF;
+    text-decoration: none;
+}
+
+.submit_a_request{
+    background-color: #f3f3f3; /* цвет фона */
+    color: lightslategrey; /* Белые буквы */
+    font-size: 13pt; /* Размер шрифта в пунктах */
+    height: 200px;
+    margin-left: 150px;
+    /*border: 0.5px solid red;*/
+    border-radius: 5px ;
+    margin-top: 30px;
+    width: 200px;
+    text-align: center;
+}
+
+.index-grid{
+    height: 100vh; /*высота в процентах*/
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    grid-column-gap: 10px; /*отступы в столбце*/
+    grid-row-gap: 10px; /*отступы в ряде*/
+    margin-left: 100px;
+}
+
+.block-text{
+    margin-top: 100px;
+}
+
+.link-block-text{
+    margin-top: 10px;
+}
+
+.link-block-text a{
+    text-decoration: none;
+}
+
+.link-block-text-dz{
+    margin-top: 10px;
+}
+
+.link-block-text-dz a{
+    text-decoration: none;
+}
+.submit_a_request-less{
+    background-color: #f3f3f3; /* цвет фона */
+    color: lightslategrey; /* Белые буквы */
+    font-size: 13pt; /* Размер шрифта в пунктах */
+    height: 200px;
+    margin-left: 150px;
+    /*border: 0.5px solid red;*/
+    border-radius: 5px ;
+    margin-top: 30px;
+    width: 200px;
+    text-align: center;
+
+}
+
+.index-grid-less{
+    height: 100vh; /*высота в процентах*/
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 200px;
+    grid-column-gap: 10px; /*отступы в столбце*/
+    grid-row-gap: 10px; /*отступы в ряде*/
+    margin-left: 100px;
+    margin-top: 150px;
+}
+
+.index-text-title{
+    margin-top: 100px;
 }

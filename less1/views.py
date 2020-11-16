@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render
-
-# Create your views here.
-
-# -*- coding: utf-8 -*-
 from django.shortcuts import render, redirect
 from django.template.response import TemplateResponse, HttpResponse
 

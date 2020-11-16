@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<title>JS-6-IN-WEBYK</title>{% endblock title %}
+{% block css %}<link type="text/css" rel="stylesheet" href="{% static "less6/css/less6.css" %}">{% endblock css %}
+{% block content %}
+    <div class="grid-order">
+        <div class="shild-grid-orders1">
+            <div>Спасибо ваш заказ</div>
+            <div id="datacard"></div>
+        </div>
+        <div class="shild-grid-orders2">
+        <div class="orders-data">Ваши данные</div>
+            <div class="orders-fio">Фамилия <span class="fio-with-page">{{ all_data.0 }}</span></div>
+            <div class="orders-fio">Телефон <span class="ph-with-page">{{ all_data.1 }}</span></div>
+            <div class="orders-fio">Электронная <span class="mail-with-page">{{ all_data.2 }}</span></div>
+        </div>
+    </div>
+
+    <script>
+       let datacard = localStorage.getItem('datacard')
+       document.getElementById('datacard').innerHTML = datacard
+    </script>
+{% endblock %}

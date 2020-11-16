@@ -93,29 +93,18 @@ div .text-prod{
     display: block;
     padding-left: 15px;
 }
-.submit_a_request{
-    background: #999891; /* цвет фона */
-    color: white; /* Белые буквы */
-    font-size: 13pt; /* Размер шрифта в пунктах */
-    height: 42px;
-    margin-left: 150px;
-    border: 0.5px solid red;
-    border-radius: 5px ;
-    margin-top: 30px;
-    width: 200px;
-}
 
 .cart_flex{
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 38%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     margin-top: 25px;
 }
 
 .goods_data{
-    text-align: center;
+    /*text-align: center;*/
     border-top: 1px dashed;
     padding: 10px 0 10px;
 }
@@ -131,4 +120,69 @@ div .text-prod{
 .main-table{
     margin-top: 100px;
     margin-left: 80px;
+}
+
+.grid-order {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 400px;
+    margin-left: 350px;
+    grid-column-gap: 150px; /*отступы в столбце*/
+    grid-row-gap: 10px; /*отступы в ряде*/
+}
+
+
+.shild-grid-orders1{
+    background-color: #f3f3f3; /* цвет фона */
+    color: lightslategrey; /* Белые буквы */
+    font-size: 22pt; /* Размер шрифта в пунктах */
+    height: 400px;
+    /*margin-left: 150px;*/
+    /*border: 0.5px solid red;*/
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 498px;
+    text-align: center;
+
+}
+
+.shild-grid-orders2{
+    background-color: #f3f3f3; /* цвет фона */
+    color: lightslategrey; /* Белые буквы */
+    font-size: 13pt; /* Размер шрифта в пунктах */
+    height: 400px;
+    margin-left: 150px;
+    /*border: 0.5px solid red;*/
+    border-radius: 5px ;
+    margin-top: 30px;
+    width: 300px;
+    text-align: center;
+}
+
+.orders-data{
+    margin-bottom: 25px;
+    font-size: 22pt;
+
+}
+.orders-fio{
+    text-align: left;
+    margin-left: 15px;
+}
+
+.fio-with-page{
+    text-align: center;
+    margin-left: 100px;
+}
+
+.orders-phone{
+    text-align: left;
+
+}
+
+.ph-with-page{
+    margin-left: 100px;
+}
+
+.mail-with-page{
+    margin-left: 50px;
 }

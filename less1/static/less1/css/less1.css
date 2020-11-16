@@ -1,3 +1,29 @@
 p.example {
     color: green;
 }
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.hg {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows:
+    100px
+    1fr
+    30px;
+    grid-gap: 10px;
+    min-height: 100vh;
+}
+.hg-header {
+    grid-column: 1 / 4;
+    /* или вариант через отрицательное значение */
+    /* grid-column: 1 / -1; */
+    /* или вариант через ключевое слово span */
+    /* указываем первый столбец в качестве начала
+    и количество дорожек, которое будет охватывать грид-элемент */
+    /* grid-column: 1 / span 3; */
+}
+.hg-footer {
+    grid-column: 1 / 4;
+}
