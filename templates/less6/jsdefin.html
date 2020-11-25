@@ -3,6 +3,42 @@
 {% block title %}<title>JS-6-IN-WEBYK</title>{% endblock title %}
 {% block css %}<link type="text/css" rel="stylesheet" href="{% static "less6/css/less6.css" %}">{% endblock css %}
 {% block content %}
+
+    <style>
+
+        .plus{
+            display: none;
+        }
+
+        .minus{
+            display: none;
+        }
+
+        .delete_x{
+            display: none;
+        }
+
+        .title{
+            margin-left: 20px;
+        }
+        .goods_data{
+            display: flex;
+            margin-left: 20px;
+        }
+        .goods_data:first-child{
+            color: #0000FF;
+        }
+
+        .my_sale span{
+            display: none;
+        }
+
+        .orders-fio{
+            display: flex;
+            justify-content: space-around;
+        }
+
+    </style>
     <div class="grid-order">
         <div class="shild-grid-orders1">
             <div>Спасибо ваш заказ</div>
@@ -12,12 +48,26 @@
         <div class="orders-data">Ваши данные</div>
             <div class="orders-fio">Фамилия <span class="fio-with-page">{{ all_data.0 }}</span></div>
             <div class="orders-fio">Телефон <span class="ph-with-page">{{ all_data.1 }}</span></div>
-            <div class="orders-fio">Электронная <span class="mail-with-page">{{ all_data.2 }}</span></div>
+            <div class="orders-fio"><span>Электронная почта</span> <span class="mail-with-page">{{ all_data.2 }}</span></div>
         </div>
     </div>
 
     <script>
-       let datacard = localStorage.getItem('datacard')
-       document.getElementById('datacard').innerHTML = datacard
+       let datacard = localStorage.getItem('datacard')  // пенресли корзину с пред страницы
+       document.getElementById('datacard').innerHTML = datacard  // отображаем корзину на странице оконачния заказа
+       {#let item_tovar = #}
+
+       {#console.log(document.getElementsByClassName('goods_data').length)#}
+       for (item of document.getElementsByClassName('goods_data')){
+           item.firstChild.textContent += ' руб'
+           console.log('item_goods')
+           console.log(item)
+       }
+
+       for (itemm of document.getElementsByClassName('title')){
+           itemm.firstChild.textContent += ' шт '
+           console.log('item_title')
+           console.log(item)
+       }
     </script>
 {% endblock %}

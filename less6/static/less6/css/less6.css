@@ -195,27 +195,36 @@ div .text-prod{
     margin-left: 50px;
 }
 
-.plus{
-    display: none;
-}
+/*.plus{*/
+/*    display: none;*/
+/*}*/
 
-.minus{
-    display: none;
-}
+/*.minus{*/
+/*    display: none;*/
+/*}*/
 
-.delete_x{
-    display: none;
-}
+/*.delete_x{*/
+/*    display: none;*/
+/*}*/
 
-.title{
-    margin-left: 20px;
-}
+/*.title{*/
+/*    margin-left: 20px;*/
+/*}*/
 
-#parent p:first-child {
-    color: green;
-    text-decoration: underline;
-}
 
-.goods_data:after{
-    content: "руб";
-}
+/*.goods_data:first-child{*/
+/*    color: #0000FF;*/
+/*}*/
+
+/*.my_sale span{*/
+/*    display: none;*/
+/*}*/
+
+/*#parent p:first-child {*/
+/*    color: green;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*.goods_data:after{*/
+/*    content: " шт.";*/
+/*}*/
