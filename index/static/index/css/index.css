@@ -5,6 +5,12 @@
     height: 500px;
 }
 
+.contener-two{
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0px;
+    height: 500px;
+}
 /*.grid-item{*/
 /*    text-align: center;*/
 /*    font-size: 1.1em;*/
@@ -82,11 +88,11 @@
 .index-grid-less{
     height: 100vh; /*высота в процентах*/
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
     grid-template-rows: 200px;
     grid-column-gap: 10px; /*отступы в столбце*/
     grid-row-gap: 10px; /*отступы в ряде*/
-    margin-left: 160px;
+    margin-left: 100px;
     margin-top: 150px;
 }
 

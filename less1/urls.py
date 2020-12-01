@@ -7,8 +7,8 @@ from less1.views import JstDef, JsDefDz1
 
 
 urlpatterns = [
-    path('', JstDef),
-    path('dz/', JsDefDz1),
+    path('', JstDef, name='less1'),
+    path('dz/', JsDefDz1, name='lessdz1'),
 ]
 
 
