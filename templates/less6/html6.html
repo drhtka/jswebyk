@@ -18,7 +18,7 @@
             </tr>
             <tr>
                 <td class="td_index"><div>iphone 7x 7500
-                    <button class="bay" onclick="openModal('iphone-7x', 7500, this, 0)">купить</button>
+                    <button class="bay" onclick="openModal('iphone 7x', 7500, this, 0)">купить</button>
                 </div>
                 <div>iphone 8x 8600
                     <button class="bay" onclick="openModal('iphone 8x', 8600, this, 1)">купить</button>
@@ -36,6 +36,7 @@
         </table>
     </div>
     <div class="myModal">
+    <div class="hidden"></div>
         <div class="modalContent">
             Вы купили эти товары
         </div>
@@ -50,14 +51,14 @@
                 <div id="summ">
                 </div>
             </div>
-        <form  class="form_order" onsubmit="chekForm(this,event)" action="/less6/lessin6" method="get">
+        <form  class="form_order" onsubmit="chekForm(this,event)" action="{% url 'lessin6' %}" method="get">
         <div class="myCart-input">
             <input type="text" value="" name="chek" placeholder="Фамилия, имя, отчество *">
             <input type="text" value="" name="chek2" placeholder="Телефон (например для РФ: +7 xxx xxx xx xx) *">
             <input type="text" value="" name="chek3" placeholder="Электронная почта *">
         </div>
             <input type="hidden" id="datacard" name="datacard"> <!--используем для localStorage -->
-            <input class="submit_a_request" type="button" value="Оформить заявку" onclick="myCartsend()">
+            <input class="submit_a_request" type="submit" value="Оформить заявку" onclick="myCartsend()">
         </form>
     </div>
 
