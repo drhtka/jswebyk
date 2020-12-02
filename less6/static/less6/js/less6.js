@@ -94,12 +94,10 @@ function del(delcart, num_product, price_old) {
 
             // console.log('22')
             // console.log(delcart.parentNode.nextElementSibling.childNodes[0])
-            let split_price = delcart.parentNode.nextElementSibling.childNodes[0]
-            var my_price1 = JSON.parse(JSON.stringify(split_price))
-            console.log('my_price1')
-            console.log(my_price1)
-            // var tmp_div1 = document.getElementsByClassName("hidden")[0].appendChild(my_price1) // дает возможность записать тег чтоб разобрать его на части
-            // tmp_div1.append(split_price)
+            let split_price = delcart.parentNode.nextElementSibling.childNodes
+            // var my_price1 = JSON.parse(JSON.stringify(split_price))
+            // split_price[0] = 'hello'
+              // tmp_div1.append(copy)
             // console.log('tmp_div')
             // console.log(tmp_div1.innerHTML.split('-')[1])
             // console.log(String(split_price).split('-'))
@@ -109,6 +107,20 @@ function del(delcart, num_product, price_old) {
             let cliner_price = delcart.parentNode.nextElementSibling.childNodes[4].title  // чистая цена
             let sale_price = delcart.parentNode.nextElementSibling.childNodes[2].title  // скидочная цена цена
             let count_tovars = delcart.parentNode.nextElementSibling.childNodes[2].innerHTML // количество товаров
+
+            var copy = Object.assign({}, split_price);
+            //console.log(copy); // { baz: 3 }
+
+            // console.log('my_price1')
+            // console.log(my_price1)
+
+            // console.log('copy')
+            // console.log(copy[0])
+            // console.log(copy[0].textContent.split('- ')[1] = cliner_price)
+            copy[0].textContent = copy[0].textContent.split('- ')[0] + cliner_price
+            var tmp_div1 = document.getElementsByClassName("hidden")[0].innerHTML=copy// дает возможность записать тег чтоб разобрать его на части
+
+
             // console.log('1')
             // console.log(document.getElementById('summ').innerHTML)
             let summ_product_count = (sale_price * count_tovars)
