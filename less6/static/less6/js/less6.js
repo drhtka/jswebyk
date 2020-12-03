@@ -108,18 +108,21 @@ function del(delcart, num_product, price_old) {
             let sale_price = delcart.parentNode.nextElementSibling.childNodes[2].title  // скидочная цена цена
             let count_tovars = delcart.parentNode.nextElementSibling.childNodes[2].innerHTML // количество товаров
 
-            var copy = Object.assign({}, split_price);
+            var copy = Object.assign({}, split_price); // копируем скидочную цену и загоняем в переменную
             //console.log(copy); // { baz: 3 }
-
             // console.log('my_price1')
             // console.log(my_price1)
 
-            // console.log('copy')
-            // console.log(copy[0])
-            // console.log(copy[0].textContent.split('- ')[1] = cliner_price)
-            copy[0].textContent = copy[0].textContent.split('- ')[0] + cliner_price
-            var tmp_div1 = document.getElementsByClassName("hidden")[0].innerHTML=copy// дает возможность записать тег чтоб разобрать его на части
-
+            console.log('copy')
+            console.log(copy)
+            console.log('copy_split')
+            console.log(copy[0].textContent.split('- ')[1] = cliner_price)
+            console.log('textContent')
+            console.log(copy[0].textContent)
+            copy[0].textContent = copy[0].textContent.split('- ')[0] + cliner_price// дает возможность разобрать тег на части
+            //закоментил 03.12//var tmp_div1 = document.getElementsByClassName("hidden")[0].innerHTML=copy// дает возможность записать тег чтоб разобрать его на части
+            console.log('copy[0].textContent')
+            console.log(copy[0].textContent)
 
             // console.log('1')
             // console.log(document.getElementById('summ').innerHTML)
@@ -134,8 +137,8 @@ function del(delcart, num_product, price_old) {
             let all_sum_minus = ''
             //let test_allsumm = ''
             sum_minus = Number(delcart.previousElementSibling.previousElementSibling.title * count_tovar_cart)
-            alert('sum_minus')
-            alert(sum_minus)
+            // alert('sum_minus')
+            // alert(sum_minus)
             all_sum_minus = Number(document.getElementById('summ').innerHTML) - sum_minus // вычитаеем из общей суммы полученный результат
             document.getElementById('summ').innerHTML = all_sum_minus // выводим общую сумму в шаблон
             count_tovars_cart--  // минус товар из корзины
